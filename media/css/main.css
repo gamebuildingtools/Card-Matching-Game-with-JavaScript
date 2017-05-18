@@ -1,0 +1,51 @@
+/*
+main.css
+Lines that start with @keyframe applies towards an animation. The 0% represents when the animation is at to 0, or just started. The 100% represents when the animation is complete. For example, in @keyframes flipBack, the width starts out at 150px when the animation starts. When it is complete, the width gets set to 5px. flipFront and slideIn follow the same generatl structure, but the CSS applied is different in each case.
+*/
+@keyframes flipBack {
+  0% {
+    width: 150px
+  }
+  100% {
+    width: 5px
+  }
+}
+
+@keyframes flipFront {
+  0% {
+    width: 5px
+  }
+  100% {
+    width: 150px
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    position: absolute;
+		top:0;
+		bottom: 0;
+		left: -100%;
+		right: 0;
+  }
+  100% {
+    position: absolute;
+		top:0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+  }
+}
+
+div {
+	width: 600px;
+  height: 600px;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+	animation:slideIn 4s;
+	animation-fill-mode: forwards;
+}
